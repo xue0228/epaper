@@ -18,16 +18,14 @@ class Display(metaclass=ABCMeta):
 class IT8951Display(Display):
     def __init__(self, vcom: float):
         self._epd = AutoEPDDisplay(vcom=vcom)
-        self._width = self._epd.width
-        self._height = self._epd.height
 
     @property
     def width(self) -> int:
-        return self._width
+        return self._epd.width
 
     @property
     def height(self) -> int:
-        return self._height
+        return self._epd.height
 
     def clear(self):
         self._epd.clear()
