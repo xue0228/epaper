@@ -1,0 +1,14 @@
+[base]
+mode = off
+heartbeat = 2
+
+[fixed]
+interval = 300
+
+[movie]
+index = 0
+interval = 120
+
+[album]
+interval = 86400
+current = ""

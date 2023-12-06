@@ -1,0 +1,12 @@
+[Unit]
+Description=Epaper Service
+After=network.target
+
+[Service]
+User=xue0228
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/bin/python /home/xue0228/epaper/startup.py
+
+[Install]
+WantedBy=multi-user.target
